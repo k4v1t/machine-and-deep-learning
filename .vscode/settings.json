@@ -5,7 +5,4 @@
 
   // Stop TexLab from invoking ChkTeX
   "texlab.chktex.enabled": false,
-
-  // (Optional) keep LaTeX aux files in a subfolder when building
-  "latex-workshop.latex.outDir": "./tex"
 }

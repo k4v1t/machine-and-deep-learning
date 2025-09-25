@@ -1,10 +1,43 @@
+% -------------------------------
 % Shared packages and commands
-\usepackage[margin=1in]{geometry}
+% -------------------------------
+
+% --- Page size & margins ---
+\usepackage[a4paper,top=2cm,bottom=2.5cm,left=2cm,right=2cm]{geometry}
+
+% --- Title formatting ---
+\usepackage{titling}
+
+% Move the whole title block up
+\setlength{\droptitle}{-2em}
+
+% Keep author and date on their own lines, just reduce the gaps
+\pretitle{\begin{center}\LARGE\bfseries}%
+\posttitle{\par\end{center}\vspace{-0.5em}} % space after title
+\preauthor{\begin{center}\large}%
+\postauthor{\par\end{center}\vspace{-0.5em}} % space after author
+\predate{\begin{center}\small}%
+\postdate{\par\end{center}\vspace{-1em}} % space after date block
+
+
+% --- Math & theorem environments ---
 \usepackage{amsmath, amssymb, amsthm}
+
+% --- Graphics & tables ---
 \usepackage{graphicx}
 \usepackage{booktabs}
-\usepackage{hyperref}
-\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
 
-% Your custom commands/macros here
+% --- Hyperlinks ---
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue
+}
+
+% --- Optional: underlined hyperlinks (remove if not desired) ---
+% \usepackage[normalem]{ulem}
+% \renewcommand\UrlFont{\uline}
+
+% --- Custom macros (add your own below) ---
 % \newcommand{\R}{\mathbb{R}}
