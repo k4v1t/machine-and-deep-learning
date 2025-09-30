@@ -82,7 +82,9 @@ I will explain the data issue, provide the code used to make any changes and hig
 - Once I loaded the data, I used \texttt{df.info()} to understand the data types of each of the features. \\
 - For object types, I used \texttt{df[col].value\_counts} to understand missing data. \\
 - For numerical types, I used \texttt{df.describe(include='all')} to understand missing data. \\
-The dataset has '?' as a proxy for missing values. We can then use \texttt{df.replace} and \texttt{df.dropna} to delete rows with missing data. This removed 2,399 instances out of a total of 32,561. 
+The dataset has '?' as a proxy for missing values. If we left these as is, this could have downstream implications when feeding the data into an ML model. \\
+For example, the model might fail to even work due to these missing value. Or, more worryingly, it could work and find patterns with this distorted data. \\
+We can then use \texttt{df.replace} and \texttt{df.dropna} to delete rows with missing data. This removed 2,399 instances out of a total of 32,561. 
 
 \begin{lstlisting}[caption={Cleaning Adult Income dataset}, label={lst:cleaning}]
 import pandas as pd
